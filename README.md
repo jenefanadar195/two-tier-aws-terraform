@@ -53,7 +53,7 @@ See the [architecture documentation](docs/architecture.md) for the architecture 
 ├── terraform.tfvars.example
 ├── .gitignore
 └── .terraform.lock.hcl
-
+```
 
 ## Validation
 
@@ -64,3 +64,17 @@ A Terraform plan was also generated successfully without deploying resources to 
 ### Terraform Plan Evidence
 
 ![Terraform Plan](docs/screenshots/terraform-plan.png)
+
+## Project Highlights
+
+- Designed a two-tier AWS architecture using Terraform.
+- Created a custom VPC with separate public and private subnets across multiple Availability Zones.
+- Configured an Internet Gateway and public routing for internet-facing resources.
+- Implemented security groups with restricted communication between the ALB, application server, and database tiers.
+- Provisioned an Amazon Linux EC2 application server with Apache using Terraform user data.
+- Configured an Application Load Balancer with a target group and HTTP listener.
+- Configured a private PostgreSQL RDS database in the private subnet tier.
+- Used Terraform variables for configurable infrastructure settings and sensitive database credentials.
+- Added Terraform outputs for important infrastructure information.
+- Validated the infrastructure with `terraform validate` and `terraform plan`.
+- Documented the architecture and validation results in GitHub.
