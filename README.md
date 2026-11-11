@@ -53,3 +53,14 @@ See the [architecture documentation](docs/architecture.md) for the architecture 
 ├── terraform.tfvars.example
 ├── .gitignore
 └── .terraform.lock.hcl
+
+
+## Validation
+
+The Terraform configuration was successfully validated using `terraform validate`.
+
+A Terraform plan was also generated successfully without deploying resources to AWS.
+
+### Terraform Plan Evidence
+
+![Terraform Plan](docs/screenshots/terraform-plan.png)
