@@ -10,11 +10,7 @@ flowchart TB
 
             subgraph Public["Public Subnets"]
                 ALB["Application Load Balancer"]
-            end
-
-            subgraph App["Application Tier"]
-                EC2A["EC2 Application Server A"]
-                EC2B["EC2 Application Server B"]
+                EC2["EC2 Application Server"]
             end
 
             subgraph Database["Private Database Tier"]
@@ -25,9 +21,5 @@ flowchart TB
     end
 
     Internet --> ALB
-
-    ALB --> EC2A
-    ALB --> EC2B
-
-    EC2A --> RDS
-    EC2B --> RDS
+    ALB --> EC2
+    EC2 --> RDS
